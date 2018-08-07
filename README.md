@@ -7,10 +7,12 @@ Simple accordion (collapsible content) component in angular 6
 
 We can manually handle inputs / outputs with collapsible content (group)
 
+{::nomarkdown}
 <mygroup title="Profile Form" [opened]="isOpen" (toggle)="isOpen = !isOpen">
   <input type="text">
   ... any element or component ...
 </mygroup>
+{:/}
 
 Or we can start using the bender component
 

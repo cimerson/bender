@@ -12,7 +12,7 @@ Just clone or download and run npm install and then ng serve to start.
 
 Or simply copy bender folder from src/app to yours app
 
-import the components to your app.module.ts
+Import the components to your app.module.ts
 
 ```
 import { GroupComponent } from './bender/bender-group.component';

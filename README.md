@@ -1,7 +1,33 @@
 # Bender
 
 Simple accordion (collapsible content) component in angular 6
+
 (parents-children communication)
+
+A working example can be found [here](https://bender7.herokuapp.com/)
+
+## Installation
+
+Just clone or download and run npm install and then ng serve to start.
+
+Or simply copy bender folder from src/app to yours app
+
+import the components to your app.module.ts
+
+```
+import { GroupComponent } from './bender/bender-group.component';
+import { BenderComponent } from './bender/bender.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    GroupComponent,
+    BenderComponent
+  ],
+...
+```
+ Adjust path if you need './something/bender/bender.component';
+
 
 ## Usage
 

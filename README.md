@@ -1,28 +1,43 @@
 # Bender
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
+Simple accordion (collapsible content) component in angular 6
+(parents-children communication)
 
-## Development server
+## Usage
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+We can manually handle inputs / outputs with collapsible content (group)
 
-## Code scaffolding
+<mygroup title="Profile Form" [opened]="isOpen" (toggle)="isOpen = !isOpen">
+  <input type="text">
+  ... any element or component ...
+</mygroup>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Or we can start using the bender component
 
-## Build
+<bender>
+  <mygroup title="First Group">this is the content</mygroup>
+  <mygroup title="Second Group">
+    <input type="text" class="form-control" />
+    <button>Send</button>
+  </mygroup>
+  <mygroup title="Third Group">this is the content</mygroup>
+  <mygroup title="Fourth Group">this is the content</mygroup>
+  <mygroup title="Fifth Group">this is the content</mygroup>
+</bender>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Options
 
-## Running end-to-end tests
+This component have 3 options
+1. Open (colapse) first element (group) at start
+2. Open selected element and close all others
+3. Open/close selected element at any time
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+(you can check in src/app/bender/bender.component.ts)
 
-## Further help
+## Styling
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The base stylesheet is located at src/app/bender/bender.component.css and this stylesheet only includes properties necessary for the Bender to function.
+
 # bender

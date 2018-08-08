@@ -22,7 +22,16 @@
     background-color: rgb(168, 165, 165);
   }
   
-  .mypanel .panel-heading:after {
-    content: '\2b9b'; /* Unicode character for arrowhead */
+  .panel-heading:after {
+    content: '\2b9b'; /* Unicode character for down arrowhead */
     float: right;
+  }
+
+  .panel-heading.active:after {
+    content: "\2b99"; /* Unicode character for up arrowhead */
+    float: right;
+  }
+
+  .mypanel .panel-heading.active {
+    background-color: rgb(168, 165, 165);
   }

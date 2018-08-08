@@ -4,10 +4,10 @@ import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from 
   selector: 'mygroup',
   template: `
   <div class="mypanel">
-    <div class="panel-heading" (click)="toggle.emit()">
+    <div class="panel-heading" [ngClass]="{'active': opened}" (click)="toggle.emit()">
       {{title}}
     </div>
-    <div class="panel-body" [ngClass]="{'hidden': !opened}">
+    <div class="panel-body" [ngClass]="{'hidden': !opened}" >
       <ng-content></ng-content>
     </div>
   <div>
